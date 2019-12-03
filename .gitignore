@@ -1,3 +1,4 @@
 /venv
+__init__.py
 auth_stars.py
 auth_email.py
