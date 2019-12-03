@@ -22,7 +22,7 @@ import time
 # --------------- STARS IMPLEMENTATION -------------------
 # open Chrome browser and enter the url
 binary = FirefoxBinary()
-driver = webdriver.Firefox(executable_path='/home/shortcuter4/Desktop/bilkent-bot/driver/geckodriver')
+driver = webdriver.Firefox(executable_path='[WRITE DRIVER PATH HERE]/geckodriver')
 #driver = webdriver.Firefox(firefox_binary=binary)
 driver.get("https://stars.bilkent.edu.tr/accounts/login/")
 windows_before = driver.current_window_handle[0]
@@ -30,13 +30,13 @@ windows_before = driver.current_window_handle[0]
 # put ID number to the given box
 login = driver.find_element_by_name("LoginForm[username]")
 login.clear()
-login.send_keys(" YOUR STARS ID ", Keys.TAB)
+login.send_keys("[WRITE YOUR STARS ID HERE]", Keys.TAB)
 login.send_keys(Keys.TAB)
 
 # put password to the given box
 pwd = driver.find_element_by_xpath("//div[@class='input-prepend']//input[@value='']")
 pwd.click()
-pwd.send_keys(" YOUR STARS PASSWORD ", Keys.TAB)
+pwd.send_keys(" [WRITE YOUR STARS PASSWORD HERE] ", Keys.TAB)
 
 # submit authentication by clicking button
 driver.find_element_by_xpath('//button[@type="submit"]').click()
@@ -55,12 +55,12 @@ driver.get("https://webmail.bilkent.edu.tr/")
 # enter email
 email = driver.find_element_by_id("rcmloginuser")
 email.clear()
-email.send_keys(" YOUR EMAIL ", Keys.TAB)
+email.send_keys("[WRITE YOUR EMAIL HERE] ", Keys.TAB)
 
 # enter password
 pswd = driver.find_element_by_xpath("//input[@autocomplete='off']")
 pswd.click()
-pswd.send_keys(" YOUR EMAIL PASSWORD ", Keys.TAB)
+pswd.send_keys("[WRITE EMAIL PASSWORD HERE]", Keys.TAB)
 
 # click Login button
 driver.find_element_by_xpath('//input[@type="submit"]').click()
