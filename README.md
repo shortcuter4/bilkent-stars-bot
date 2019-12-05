@@ -12,6 +12,6 @@ You should edit starsbot.py file by changing STARS ID, PASSWORD and EMAIL, PASSW
 
 ```
 python starsbot.py
-``
+```
 
 
